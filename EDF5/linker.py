@@ -8,7 +8,7 @@ import numpy
 from openpyxl import Workbook, load_workbook
 
 def loader():
-	wb = load_workbook(filename = "suzuki_nobetaprime_unionized.xlsx")
+	wb = load_workbook(filename = "acid_amine_final_320.xlsx")
 	sheet = wb['Sheet1']
 
 	allprods = []
@@ -31,17 +31,21 @@ def loader():
 		Chem.Kekulize(mol, clearAromaticFlags=True)
 		mols.append(mol)
 
-	N = 64
-	dist = int(200000/N)
+	N = 320
+	dist = int(200100/N)
 
 
 	cmap = plt.get_cmap(name='plasma')
-	drug_counter=0
+	drug_counter=7000
 	all_links = []
 	single = Chem.MolFromSmiles("C1CN2C(=NN=C2C(F)(F)F)CN1C(=O)CC(CC3=CC(=C(C=C3F)F)F)N")
+	sit = Chem.MolFromSmiles("FC1=CC(C[C@H](N)CC(N2CCN3C(C2)=NN=C3C(F)(F)F)=O)=C(F)C(F)=C1")
+	quin = Chem.MolFromSmiles("C=C[C@@H]1[C@@H]2CC([C@@H](C3=C(C=C(OC)C=C4)C4=NC=C3)O)[N@](C1)CC2")
+	nos = Chem.MolFromSmiles("[H][C@]1([C@]2([H])C(C=CC(OC)=C3OC)=C3C(O2)=O)C4=C(OC)C5=C(OCO5)C=C4CCN1C")
+	single=sit
 	Chem.SanitizeMol(single)
 	Chem.Kekulize(single, clearAromaticFlags=True)
-	# mols = [single]
+	mols = [single]
 	for drug in mols:
 		reaction_counter = 9300
 		rxn_counter = 0
@@ -50,6 +54,7 @@ def loader():
 			if hits:
 				inter = numpy.interp(len(hits), (1, 10), (-0, +1))
 				color = tuple(255*x for x in cmap(inter)[0:3])
+				print(rxn_counter)
 				link = "hs1 " + str(drug_counter) + " " + str(drug_counter+1) + " hs2 " + str(reaction_counter) + " " + str(reaction_counter+dist) + " color=(" + str(color[0])+","+ str(color[1])+","+str(color[2])+",.75)"
 				all_links.append(link)
 			reaction_counter = reaction_counter + dist
@@ -57,10 +62,9 @@ def loader():
 		drug_counter = drug_counter + 1
 
 	print(len(all_links))
-	with open("links.txt", "w") as output:
+	with open("sitagliptin_links.txt", "w") as output:
 		for s in all_links:
 			output.write("%s\n" % s)
-
 
 
 

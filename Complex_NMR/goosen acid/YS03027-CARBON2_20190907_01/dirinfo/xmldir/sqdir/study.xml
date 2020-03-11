@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE template>
+
+<template>
+  <protocol title="YS03027-CARBON2_20190907_01" type="protocol" exp="grandparent" lock="off" id="tmpstudy" tooltext="YS03027-CARBON2" expanded="true">
+    <action   type="LIB"  status="Completed"  lock="on"  title="YS03027-CARBON2_CARBON_01 "  exp="CARBON"  time=""  macro="return"  data="/home/yunings/vnmrsys/data/YS03027-CARBON2_20190907_01/YS03027-CARBON2_CARBON_01"  CPnode="CARBON"  tooltext="CARBON"  id="Sqn0001"  />
+  </protocol>
+</template>

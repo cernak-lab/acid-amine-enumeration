@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE template>
+
+<template>
+  <protocol title="YS01143-O-TOL_ESTER_CARBON1_20190907_01" type="protocol" exp="grandparent" lock="off" id="tmpstudy" tooltext="YS01143-O-TOL_ESTER_CARBON1" expanded="true">
+    <action   type="LIB"  status="Completed"  lock="on"  title="YS01143-O-TOL_ESTER_CARBON1_CARBON_01 "  exp="CARBON"  time=""  macro="return"  data="/home/yunings/vnmrsys/data/YS01143-O-TOL_ESTER_CARBON1_20190907_01/YS01143-O-TOL_ESTER_CARBON1_CARBON_01"  CPnode="CARBON"  tooltext="CARBON"  id="Sqn0001"  />
+  </protocol>
+</template>

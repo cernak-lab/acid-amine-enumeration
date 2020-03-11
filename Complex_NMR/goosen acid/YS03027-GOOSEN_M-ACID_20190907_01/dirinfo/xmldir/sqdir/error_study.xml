@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE template>
+
+<template>
+  <protocol title="YS03027-GOOSEN_M-ACID_20190907_01" type="protocol" exp="grandparent" lock="off" id="tmpstudy" tooltext="YS03027-GOOSEN_M-ACID" expanded="true">
+    <action   type="LIB"  status="Completed"  lock="on"  title="YS03027-GOOSEN_M-ACID_PROTON_01 "  exp="PROTON"  time=""  macro="return"  data="/home/yunings/vnmrsys/data/YS03027-GOOSEN_M-ACID_20190907_01/YS03027-GOOSEN_M-ACID_PROTON_01"  CPnode="PROTON"  tooltext="PROTON"  id="Sqn0001"  />
+  </protocol>
+</template>
